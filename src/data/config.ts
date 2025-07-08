@@ -37,7 +37,7 @@ const config = {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    
+    twitter: "",
     linkedin: "https://www.linkedin.com/in/kejal-jain",
     instagram: "https://www.instagram.com/kejal_2005?igsh=MXdxYnY2Z3JjMDVzcw==",
     github: "https://github.com/kejal2005",
