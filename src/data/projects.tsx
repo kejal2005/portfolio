@@ -304,11 +304,158 @@ export type Project = {
   github?: string;
   live: string;
 };
-// All projects are commented out for now
-// const projects: Project[] = [
-//   { /* ...project 1... */ },
-//   { /* ...project 2... */ },
-//   ...
-// ];
-const projects: Project[] = [];
+const projects: Project[] = [
+  {
+    id: "imagify",
+    category: "AI and Image Generation",
+    title: "Imagify",
+    src: "/assets/projects-screenshots/imagify/imagify1.png",
+    screenshots: ["imagify1.png", "imagify2.png", "imagify3.png"],
+    live: "https://imagify-demo-link.com/",
+    github: "https://github.com/kejal2005/imagify",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.express],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Imagify is a modern web application that transforms text descriptions into stunning images using AI technology.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/imagify/imagify1.png`,
+              `${BASE_PATH}/imagify/imagify2.png`,
+              `${BASE_PATH}/imagify/imagify3.png`,
+              `${BASE_PATH}/imagify/imagify3.png`,
+              `${BASE_PATH}/imagify/imagify5.png`,
+              `${BASE_PATH}/imagify/imagify6.png`,
+             
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+  {
+    id: "portfolio",
+    category: "Portfolio",
+    title: "My Portfolio",
+    src: "/assets/projects-screenshots/myportfolio/landing.png",
+    screenshots: ["landing.png", "navbar.png", "project.png"],
+    live: "https://my-portfolio-demo-link.com/",
+    github: "https://github.com/kejal2005/My_portfolio",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind],
+      backend: [],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            This is my personal portfolio website showcasing my projects, skills, and experience as a Full Stack Developer and AIML Enthusiast.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/myportfolio/landing.png`,
+              `${BASE_PATH}/myportfolio/navbar.png`,
+              `${BASE_PATH}/myportfolio/project.png`,
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+  {
+    id: "weather-app",
+    category: "Web App",
+    title: "Weather App",
+    src: "/assets/projects-screenshots/weather app/weather1.png",
+    screenshots: ["weather1.png", "weather2.png", "weather3.png"],
+    live: "https://weather-app-demo-link.com/",
+    github: "https://github.com/kejal2005/weather-app",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind],
+      backend: [PROJECT_SKILLS.node],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Weather App provides real-time weather updates for any city using a clean and responsive interface.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/weather app/weather1.png`,
+              `${BASE_PATH}/weather app/weather2.png`,
+              `${BASE_PATH}/weather app/weather3.png`,
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+  {
+    id: "atm-simulator",
+    category: "Simulation & Banking",
+    title: "ATM Simulator",
+    src: "/assets/projects-screenshots/atm simulator/atm1.png",
+    screenshots: ["atm1.png", "atm2.png", "atm3.png"],
+    live: "https://atm-simulator-demo-link.com/",
+    github: "https://github.com/kejal2005/atm-simulator",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.bootstrap],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.mongo],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            ATM Simulator is a web-based application that mimics the functionalities of a real ATM. Users can perform operations like balance inquiry, cash withdrawal, deposit, and mini statements in a secure, simulated environment.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/atm simulator/atm1.png`,
+              `${BASE_PATH}/atm simulator/atm2.png`,
+              `${BASE_PATH}/atm simulator/atm3.png`,
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+  {
+    id: "edgeai",
+    category: "AI and Edge Computing",
+    title: "Edge AI",
+    src: "/assets/projects-screenshots/edge ai/edgeai1.png",
+    screenshots: ["edgeai1.png"],
+    live: "https://edgeai-demo-link.com/",
+    github: "https://github.com/kejal2005/edgeai",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.docker, PROJECT_SKILLS.node],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Edge AI brings artificial intelligence to the edge, enabling real-time data processing and smart decision-making on devices close to the data source.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/edge ai/edgeai1.png`
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+];
 export default projects;
