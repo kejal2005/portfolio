@@ -321,7 +321,7 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Imagify is a modern web application that transforms text descriptions into stunning images using AI technology.
+          Imagify is a modern web application that transforms text descriptions into stunning images using AI technology. Built with a robust tech stack and user-friendly interface, it provides a seamless experience for generating AI-powered images.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
@@ -375,7 +375,7 @@ const projects: Project[] = [
     title: "Weather App",
     src: "/assets/projects-screenshots/weather app/weather1.png",
     screenshots: ["weather1.png", "weather2.png", "weather3.png"],
-    live: "https://weather-app-demo-link.com/",
+    live: "https://weather-app-55ai.vercel.app/",
     github: "https://github.com/kejal2005/weather-app",
     skills: {
       frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind],
@@ -385,7 +385,7 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Weather App provides real-time weather updates for any city using a clean and responsive interface.
+          A modern weather application built with React and Vite that provides real-time weather information and gives clothing suggestions for any location.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
@@ -445,7 +445,7 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Edge AI brings artificial intelligence to the edge, enabling real-time data processing and smart decision-making on devices close to the data source.
+          EdgeAI-Guard is a real-time, multi-modal anomaly detection dashboard designed for edge devices. It fuses video and audio streams to detect abnormal events using deep learning models, providing a robust monitoring solution for security, safety, and industrial applications.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
