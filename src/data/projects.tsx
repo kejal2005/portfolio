@@ -345,12 +345,12 @@ const projects: Project[] = [
     title: "My Portfolio",
     src: "/assets/projects-screenshots/myportfolio/landing.png",
     screenshots: ["landing.png", "navbar.png", "project.png"],
-    live: "https://my-portfolio-demo-link.com/",
+    live: "https://portfolio-lake-tau-41.vercel.app/",
     github: "https://github.com/kejal2005/My_portfolio",
     skills: {
       frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind],
       backend: [],
-    },
+    }, 
     get content() {
       return (
         <div>
