@@ -14,8 +14,7 @@ Welcome to my interactive 3D portfolio! This project showcases my work, skills, 
 - **Backend:** Node.js, Express.js, MongoDB
 - **Other:** TypeScript, Vercel, GitHub Actions
 
-## 📸 Screenshots
-![Portfolio Screenshot](public/assets/projects-screenshots/portfolio/landing.png)
+
 
 ## 📝 Getting Started
 
