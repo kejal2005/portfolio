@@ -2,6 +2,7 @@ import { EmailTemplate } from "@/components/email-template";
 import { config } from "@/data/config";
 import { Resend } from "resend";
 import { z } from "zod";
+import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -12,6 +13,9 @@ const Email = z.object({
 });
 export async function POST(req: Request) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json({ error: "Missing RESEND_API_KEY" }, { status: 500 });
+    }
     const body = await req.json();
     console.log(body);
     const {
@@ -20,7 +24,7 @@ export async function POST(req: Request) {
       error: zodError,
     } = Email.safeParse(body);
     if (!zodSuccess)
-      return Response.json({ error: zodError?.message }, { status: 400 });
+      return NextResponse.json({ error: zodError?.message }, { status: 400 });
 
     const { data: resendData, error: resendError } = await resend.emails.send({
       from: "Porfolio <onboarding@resend.dev>",
@@ -34,11 +38,11 @@ export async function POST(req: Request) {
     });
 
     if (resendError) {
-      return Response.json({ resendError }, { status: 500 });
+      return NextResponse.json({ resendError: resendError.message || resendError }, { status: 500 });
     }
 
-    return Response.json(resendData);
-  } catch (error) {
-    return Response.json({ error }, { status: 500 });
+    return NextResponse.json(resendData);
+  } catch (error: any) {
+    return NextResponse.json({ error: error?.message || "Unknown error" }, { status: 500 });
   }
 }
